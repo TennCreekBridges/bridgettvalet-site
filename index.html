@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bridgett Valet — Style Sheet</title>
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Big Shoulders Display";font-weight:700;font-display:swap;src:url(fonts/big-shoulders-display-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Big Shoulders Display";font-weight:800;font-display:swap;src:url(fonts/big-shoulders-display-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Big Shoulders Display";font-weight:900;font-display:swap;src:url(fonts/big-shoulders-display-latin-900-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:500;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:600;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow";font-weight:400;font-display:swap;src:url(fonts/barlow-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/barlow-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Barlow";font-weight:600;font-display:swap;src:url(fonts/barlow-latin-600-normal.woff2) format("woff2")}
+
+:root{
+  --ink:#0F1115; --panel:#181B21; --line:#2A2F38;
+  --text:#F2EFE8; --muted:#9AA0AA;
+  --gold:#F5B700; --teal:#2A9D8F;
+  --display:"Big Shoulders Display","Arial Narrow",sans-serif;
+  --sub:"Barlow Semi Condensed",system-ui,sans-serif;
+  --body:"Barlow",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--ink);color:var(--text);font:400 18px/1.6 var(--body);padding:0 16px 96px}
+.wrap{max-width:1040px;margin:0 auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid var(--line);font:600 16px var(--sub);letter-spacing:.08em;text-transform:uppercase}
+nav .mark{font:900 28px var(--display);letter-spacing:.04em}
+nav .mark b{color:var(--gold)}
+nav ul{display:flex;gap:28px;list-style:none;padding:0}
+nav a{color:var(--text);text-decoration:none}
+nav a:hover{color:var(--gold)}
+.hero{padding:88px 0 72px}
+.tag{font:600 14px var(--sub);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.tag::before{content:"";width:36px;height:2px;background:var(--gold)}
+h1{font:900 clamp(56px,11vw,128px)/.9 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:20px 0 28px}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{max-width:620px;color:var(--muted);font-size:20px}
+.btns{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.btn{font:600 16px var(--sub);letter-spacing:.1em;text-transform:uppercase;padding:14px 26px;border-radius:2px;text-decoration:none;border:2px solid var(--gold)}
+.btn.primary{background:var(--gold);color:var(--ink)}
+.btn.primary:hover{background:var(--text);border-color:var(--text)}
+.btn.ghost{color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(36px,6vw,56px)/1 var(--display);text-transform:uppercase;margin-bottom:28px}
+h3{font:600 22px var(--sub);letter-spacing:.02em;margin-bottom:8px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
+.sw{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--panel)}
+.sw i{display:block;height:84px}
+.sw p{padding:10px 12px;font:500 14px/1.3 var(--sub);color:var(--muted)}
+.sw p b{display:block;color:var(--text);font-weight:600;font-size:15px}
+.type{display:grid;gap:22px}
+.row{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:baseline;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.row small{font:500 13px var(--sub);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.row .d{font:900 64px/1 var(--display);text-transform:uppercase}
+.row .s{font:600 26px var(--sub)}
+.row .b{font:400 18px/1.6 var(--body);max-width:60ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card .img{aspect-ratio:16/10;background:linear-gradient(135deg,#222732,#12151a);display:grid;place-items:center;color:var(--muted);font:600 13px var(--sub);letter-spacing:.2em;text-transform:uppercase}
+.card .in{padding:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{font:600 12px var(--sub);letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--teal);color:var(--teal);border-radius:2px}
+.card p{color:var(--muted);font-size:16px}
+.result{background:var(--panel);border-left:4px solid var(--gold);padding:28px 32px}
+.result .big{font:900 clamp(40px,7vw,72px)/.95 var(--display);text-transform:uppercase}
+.result .big span{color:var(--gold)}
+.result p{color:var(--muted);margin-top:12px}
+@media(max-width:640px){.row{grid-template-columns:1fr;gap:6px}nav ul{display:none}.hero{padding:56px 0 48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="mark">BRIDGETT <b>VALET</b></div>
+    <ul><li><a href="#">Work</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul>
+  </nav>
+
+  <header class="hero">
+    <div class="tag">Creative Director · Ecommerce Builder</div>
+    <h1>Five brands.<br><em>One designer.</em></h1>
+    <p class="lede">Concept to color to catalog to checkout. Thirteen years of building outdoor brands that look sharp and sell on the water.</p>
+    <div class="btns">
+      <a class="btn primary" href="#">See the work</a>
+      <a class="btn ghost" href="#">Get in touch</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Palette</h2>
+    <div class="swatches">
+      <div class="sw"><i style="background:#0F1115"></i><p><b>Ink</b>#0F1115 · background</p></div>
+      <div class="sw"><i style="background:#181B21"></i><p><b>Panel</b>#181B21 · cards</p></div>
+      <div class="sw"><i style="background:#2A2F38"></i><p><b>Line</b>#2A2F38 · borders</p></div>
+      <div class="sw"><i style="background:#F2EFE8"></i><p><b>Paper</b>#F2EFE8 · text</p></div>
+      <div class="sw"><i style="background:#9AA0AA"></i><p><b>Muted</b>#9AA0AA · secondary</p></div>
+      <div class="sw"><i style="background:#F5B700"></i><p><b>Gold</b>#F5B700 · signature</p></div>
+      <div class="sw"><i style="background:#2A9D8F"></i><p><b>Creek</b>#2A9D8F · tags</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <div class="type">
+      <div class="row"><small>Display<br>Big Shoulders 900</small><div class="d">Tall. Tight. Athletic.</div></div>
+      <div class="row"><small>Subhead / nav<br>Barlow Semi Cond. 600</small><div class="s">Launch email · Shopify migration · Fit Finder</div></div>
+      <div class="row"><small>Body<br>Barlow 400</small><div class="b">Long paragraphs stay in regular-width Barlow so they read easily on any screen. Case studies explain the problem, what I did, and what happened next.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Components</h2>
+    <div class="result" style="margin-bottom:18px">
+      <div class="big">5 brands. <span>1 designer.</span></div>
+      <p>Result callout: one big line that opens every case study.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="img">Project image</div><div class="in"><div class="chips"><span class="chip">Email</span><span class="chip">Klaviyo</span></div><h3>Case study title</h3><p>One-line description of the problem and the outcome goes here.</p></div></article>
+      <article class="card"><div class="img">Project image</div><div class="in"><div class="chips"><span class="chip">Web</span><span class="chip">Shopify</span></div><h3>Another project</h3><p>Hover a card to see the gold border and lift.</p></div></article>
+    </div>
+  </section>
+</div>
+</body>
+</html>
