@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — Bridgett Valet</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="mark" href="index.html">BRIDGETT <b>VALET</b></a>
+    <ul><li><a class="on" href="work.html">Work</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+  </nav>
+
+  <header class="page-head">
+    <div class="tag">Selected work</div>
+    <h1>The <em>work.</em></h1>
+    <p class="lede">Design, color, product, print and platform, across four brands.</p>
+  </header>
+
+  <div class="filters" role="group" aria-label="Filter work">
+    <button class="on" data-f="all">All</button>
+    <button data-f="design">Design</button>
+    <button data-f="product">Color &amp; Product</button>
+    <button data-f="print">Print</button>
+    <button data-f="web">Web</button>
+    <button data-f="email">Email</button>
+  </div>
+
+  <div class="cards" id="grid">
+    <a class="card" data-t="design" href="#"><div class="img"><img src="img/pack-tour-m.jpg" alt="Werner Pack-Tour M canyon blade graphic"></div><div class="in"><div class="chips"><span class="chip">Design</span><span class="chip">Werner</span></div><h3>Canyon · Pack-Tour M</h3><p>Blade graphic on the paddle named Best Paddle, 2026 Paddling Magazine Industry Awards.</p></div></a>
+    <a class="card" data-t="design" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Design</span><span class="chip">Werner</span></div><h3>Spirit Falls · Powerhouse</h3><p>Blade graphic for the Powerhouse paddle.</p></div></a>
+    <a class="card" data-t="design" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Design</span><span class="chip">Werner</span><span class="chip">Figma</span></div><h3>Mosaic Bass &amp; Tailing Red</h3><p>Two 2027 fishing blade graphics, part of a new gradient design language developed with the CMO and head of sales.</p></div></a>
+    <a class="card" data-t="product" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Color</span><span class="chip">Jackson</span></div><h3>Jackson 2027 colors</h3><p>Picked and developed the 2027 colorway lineup across fishing, whitewater and recreational kayaks.</p></div></a>
+    <a class="card" data-t="product" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Product</span><span class="chip">Fishing</span></div><h3>Fishing kayak development</h3><p>Hands-on product development for new fishing kayaks: prototype testing, angler feedback programs and accessory design. More on request.</p></div></a>
+    <a class="card" data-t="print" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Print</span><span class="chip">All brands</span></div><h3>2027 catalogs</h3><p>Four brand catalogs laid out in InDesign and published online. 2026 editions available for reference.</p></div></a>
+    <a class="card" data-t="web" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Web</span><span class="chip">Shopify</span></div><h3>BigCommerce to Shopify</h3><p>Full storefront design, kayak page templates and a reorganized accessory catalog for Jackson, then Eddyline.</p></div></a>
+    <a class="card" data-t="web" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Web</span><span class="chip">Shopify</span></div><h3>Custom product buttons</h3><p>Caney Fork, ECO and ONE buttons on the Jackson Shopify site.</p></div></a>
+    <a class="card" data-t="email" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Email</span><span class="chip">Klaviyo</span></div><h3>2027 color launches</h3><p>Matched color announcements for Jackson, Werner and Eddyline: one system, three brand voices.</p></div></a>
+    <a class="card" data-t="email" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Email</span><span class="chip">Eddyline</span></div><h3>Summer Sale Kickoff &amp; Blog Feature</h3><p>A three-email sale sequence and an editorial feature that both drew about double to 1.6x a typical send's clicks.</p></div></a>
+    <a class="card" data-t="email" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Email</span><span class="chip">KIALOA</span></div><h3>Get The Best, Le'ahi &amp; Flash Sale</h3><p>Island-voice storytelling and promos for KIALOA, including its best revenue-per-recipient send.</p></div></a>
+    <a class="card" data-t="email" href="#"><div class="img">Image coming</div><div class="in"><div class="chips"><span class="chip">Email</span><span class="chip">Orion</span></div><h3>Orion Flash Sale</h3><p>The account's top revenue-per-recipient send.</p></div></a>
+  </div>
+
+  <footer style="margin-top:64px">© 2026 Bridgett Valet</footer>
+</div>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('#grid .card');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+    var f=b.getAttribute('data-f');
+    cards.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.getAttribute('data-t')!==f)});
+  })});
+})();
+</script>
+</body>
+</html>

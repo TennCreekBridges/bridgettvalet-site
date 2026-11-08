@@ -3,126 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bridgett Valet — Style Sheet</title>
+<title>Bridgett Valet — Creative Director</title>
+<meta name="description" content="Creative director and ecommerce builder with 13 years designing, launching and selling outdoor gear across four brands.">
 <meta name="robots" content="noindex">
-<style>
-@font-face{font-family:"Big Shoulders Display";font-weight:700;font-display:swap;src:url(fonts/big-shoulders-display-latin-700-normal.woff2) format("woff2")}
-@font-face{font-family:"Big Shoulders Display";font-weight:800;font-display:swap;src:url(fonts/big-shoulders-display-latin-800-normal.woff2) format("woff2")}
-@font-face{font-family:"Big Shoulders Display";font-weight:900;font-display:swap;src:url(fonts/big-shoulders-display-latin-900-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow Semi Condensed";font-weight:500;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow Semi Condensed";font-weight:600;font-display:swap;src:url(fonts/barlow-semi-condensed-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow";font-weight:400;font-display:swap;src:url(fonts/barlow-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/barlow-latin-400-italic.woff2) format("woff2")}
-@font-face{font-family:"Barlow";font-weight:600;font-display:swap;src:url(fonts/barlow-latin-600-normal.woff2) format("woff2")}
-
-:root{
-  --ink:#0F1115; --panel:#181B21; --line:#2A2F38;
-  --text:#F2EFE8; --muted:#9AA0AA;
-  --gold:#F5B700; --teal:#2A9D8F;
-  --display:"Big Shoulders Display","Arial Narrow",sans-serif;
-  --sub:"Barlow Semi Condensed",system-ui,sans-serif;
-  --body:"Barlow",system-ui,sans-serif;
-}
-*{box-sizing:border-box;margin:0}
-body{background:var(--ink);color:var(--text);font:400 18px/1.6 var(--body);padding:0 16px 96px}
-.wrap{max-width:1040px;margin:0 auto}
-nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid var(--line);font:600 16px var(--sub);letter-spacing:.08em;text-transform:uppercase}
-nav .mark{font:900 28px var(--display);letter-spacing:.04em}
-nav .mark b{color:var(--gold)}
-nav ul{display:flex;gap:28px;list-style:none;padding:0}
-nav a{color:var(--text);text-decoration:none}
-nav a:hover{color:var(--gold)}
-.hero{padding:88px 0 72px}
-.tag{font:600 14px var(--sub);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
-.tag::before{content:"";width:36px;height:2px;background:var(--gold)}
-h1{font:900 clamp(56px,11vw,128px)/.9 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:20px 0 28px}
-h1 em{font-style:normal;color:var(--gold)}
-.lede{max-width:620px;color:var(--muted);font-size:20px}
-.btns{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
-.btn{font:600 16px var(--sub);letter-spacing:.1em;text-transform:uppercase;padding:14px 26px;border-radius:2px;text-decoration:none;border:2px solid var(--gold)}
-.btn.primary{background:var(--gold);color:var(--ink)}
-.btn.primary:hover{background:var(--text);border-color:var(--text)}
-.btn.ghost{color:var(--gold)}
-.btn.ghost:hover{background:var(--gold);color:var(--ink)}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font:800 clamp(36px,6vw,56px)/1 var(--display);text-transform:uppercase;margin-bottom:28px}
-h3{font:600 22px var(--sub);letter-spacing:.02em;margin-bottom:8px}
-.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
-.sw{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--panel)}
-.sw i{display:block;height:84px}
-.sw p{padding:10px 12px;font:500 14px/1.3 var(--sub);color:var(--muted)}
-.sw p b{display:block;color:var(--text);font-weight:600;font-size:15px}
-.type{display:grid;gap:22px}
-.row{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:baseline;padding-bottom:22px;border-bottom:1px solid var(--line)}
-.row small{font:500 13px var(--sub);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.row .d{font:900 64px/1 var(--display);text-transform:uppercase}
-.row .s{font:600 26px var(--sub)}
-.row .b{font:400 18px/1.6 var(--body);max-width:60ch}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .2s,transform .2s}
-.card:hover{border-color:var(--gold);transform:translateY(-3px)}
-.card .img{aspect-ratio:16/10;background:linear-gradient(135deg,#222732,#12151a);display:grid;place-items:center;color:var(--muted);font:600 13px var(--sub);letter-spacing:.2em;text-transform:uppercase}
-.card .in{padding:20px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.chip{font:600 12px var(--sub);letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--teal);color:var(--teal);border-radius:2px}
-.card p{color:var(--muted);font-size:16px}
-.result{background:var(--panel);border-left:4px solid var(--gold);padding:28px 32px}
-.result .big{font:900 clamp(40px,7vw,72px)/.95 var(--display);text-transform:uppercase}
-.result .big span{color:var(--gold)}
-.result p{color:var(--muted);margin-top:12px}
-@media(max-width:640px){.row{grid-template-columns:1fr;gap:6px}nav ul{display:none}.hero{padding:56px 0 48px}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
   <nav>
-    <div class="mark">BRIDGETT <b>VALET</b></div>
-    <ul><li><a href="#">Work</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul>
+    <a class="mark" href="index.html">BRIDGETT <b>VALET</b></a>
+    <ul><li><a href="work.html">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
   </nav>
 
   <header class="hero">
-    <div class="tag">Creative Director · Ecommerce Builder</div>
-    <h1>Five brands.<br><em>One designer.</em></h1>
-    <p class="lede">Concept to color to catalog to checkout. Thirteen years of building outdoor brands that look sharp and sell on the water.</p>
+    <div class="tag">Creative Director · Product Designer · Ecommerce Builder</div>
+    <h1>Four brands.<br><em>One designer.</em></h1>
+    <p class="lede">Concept to color to catalog to checkout. Thirteen years of designing, launching and selling outdoor gear that looks sharp and performs on the water.</p>
     <div class="btns">
-      <a class="btn primary" href="#">See the work</a>
-      <a class="btn ghost" href="#">Get in touch</a>
+      <a class="btn primary" href="work.html">See the work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
     </div>
   </header>
 
+  <div class="brands"><span>Brands I've built</span><span>Jackson Kayak</span><span>Werner Paddles</span><span>Eddyline Kayaks</span><span>KIALOA</span></div>
+
   <section>
-    <h2>Palette</h2>
-    <div class="swatches">
-      <div class="sw"><i style="background:#0F1115"></i><p><b>Ink</b>#0F1115 · background</p></div>
-      <div class="sw"><i style="background:#181B21"></i><p><b>Panel</b>#181B21 · cards</p></div>
-      <div class="sw"><i style="background:#2A2F38"></i><p><b>Line</b>#2A2F38 · borders</p></div>
-      <div class="sw"><i style="background:#F2EFE8"></i><p><b>Paper</b>#F2EFE8 · text</p></div>
-      <div class="sw"><i style="background:#9AA0AA"></i><p><b>Muted</b>#9AA0AA · secondary</p></div>
-      <div class="sw"><i style="background:#F5B700"></i><p><b>Gold</b>#F5B700 · signature</p></div>
-      <div class="sw"><i style="background:#2A9D8F"></i><p><b>Creek</b>#2A9D8F · tags</p></div>
+    <div class="award">
+      <img src="img/pack-tour-m.jpg" alt="Werner Pack-Tour M paddle blade with canyon graphic and the 2026 Paddling Magazine Industry Awards Best Paddle badge" width="1000" height="1000">
+      <div class="in">
+        <div class="kicker">Product &amp; Graphic Design</div>
+        <div class="big">Best Paddle. <span>My graphic.</span></div>
+        <p>I designed the canyon blade graphic on the Werner Pack-Tour M, named Best Paddle at the 2026 Paddling Magazine Industry Awards. It's one of a family of blade designs I build in Figma and prep for dye-sublimation.</p>
+        <div class="btns"><a class="btn ghost" href="work.html">See the design work</a></div>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Type</h2>
-    <div class="type">
-      <div class="row"><small>Display<br>Big Shoulders 900</small><div class="d">Tall. Tight. Athletic.</div></div>
-      <div class="row"><small>Subhead / nav<br>Barlow Semi Cond. 600</small><div class="s">Launch email · Shopify migration · Fit Finder</div></div>
-      <div class="row"><small>Body<br>Barlow 400</small><div class="b">Long paragraphs stay in regular-width Barlow so they read easily on any screen. Case studies explain the problem, what I did, and what happened next.</div></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Components</h2>
-    <div class="result" style="margin-bottom:18px">
-      <div class="big">5 brands. <span>1 designer.</span></div>
-      <p>Result callout: one big line that opens every case study.</p>
-    </div>
+    <h2>Selected work</h2>
+    <p class="sec-intro">Design, product and platform work across the brand family. These are the places to start.</p>
     <div class="cards">
-      <article class="card"><div class="img">Project image</div><div class="in"><div class="chips"><span class="chip">Email</span><span class="chip">Klaviyo</span></div><h3>Case study title</h3><p>One-line description of the problem and the outcome goes here.</p></div></article>
-      <article class="card"><div class="img">Project image</div><div class="in"><div class="chips"><span class="chip">Web</span><span class="chip">Shopify</span></div><h3>Another project</h3><p>Hover a card to see the gold border and lift.</p></div></article>
+      <a class="card" href="work.html">
+        <div class="img"><img src="img/pack-tour-m.jpg" alt="Werner Pack-Tour M blade graphic"></div>
+        <div class="in"><div class="chips"><span class="chip">Design</span><span class="chip">Werner</span></div><h3>Blade graphics &amp; the 2027 gradients</h3><p>Canyon, Spirit Falls, Mosaic Bass, Tailing Red. A new gradient language, built in Figma with the CMO and Werner's head of sales.</p></div>
+      </a>
+      <a class="card" href="work.html">
+        <div class="img">Image coming</div>
+        <div class="in"><div class="chips"><span class="chip">Color</span><span class="chip">Product</span></div><h3>Color &amp; product development</h3><p>Chose Jackson's 2027 colorway lineup and led hands-on development of new fishing kayaks, from first prototype through preproduction testing.</p></div>
+      </a>
+      <a class="card" href="work.html">
+        <div class="img">Image coming</div>
+        <div class="in"><div class="chips"><span class="chip">Web</span><span class="chip">Shopify</span></div><h3>BigCommerce to Shopify</h3><p>Designed the full storefront, built the kayak page templates and reorganized the accessory catalog. Eddyline followed.</p></div>
+      </a>
     </div>
   </section>
+
+  <section>
+    <div class="band">
+      <h2>Four brands. Four catalogs.</h2>
+      <p>Each brand gets its own voice, from Jackson's performance focus to Werner's clean technical look to KIALOA's island character. The 2027 catalogs are laid out in InDesign and published online.</p>
+      <div class="btns"><a class="btn primary" href="work.html">Browse the catalogs</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tools I work in</h2>
+    <div class="tools"><span>Figma</span><span>Illustrator</span><span>Photoshop</span><span>InDesign</span><span>Premiere Pro</span><span>Shopify</span><span>Klaviyo</span><span>PageFly</span><span>HTML / CSS</span></div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <div>
+        <p>I'm a creative director who builds. I joined Jackson Kayak in April 2013 and now run creative, brand and ecommerce across Jackson, Werner, Eddyline and KIALOA, from the first sketch to the checkout page.</p>
+        <p>I like being close to the product: choosing colors, testing prototypes on the water and turning what I learn into graphics, pages and launch campaigns that sell it.</p>
+      </div>
+      <ul class="facts">
+        <li><b>Based in</b>Sparta, Tennessee · remote-friendly</li>
+        <li><b>Since</b>2013 · Jackson Kayak</li>
+        <li><b>Recognition</b>2026 Paddling Magazine Best Paddle (Werner Pack-Tour M graphic)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let's talk</h2>
+    <p class="sec-intro">Open to creative leadership roles and select freelance projects.</p>
+    <a class="mail" href="mailto:hello@bridgettvalet.com">hello@bridgettvalet.com</a>
+  </section>
+
+  <footer>© 2026 Bridgett Valet</footer>
 </div>
 </body>
 </html>
